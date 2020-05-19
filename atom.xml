@@ -2,23 +2,50 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://runlin-wang.github.io</id>
     <title>Mr.lin</title>
-    <updated>2020-05-12T03:30:35.614Z</updated>
+    <updated>2020-05-19T01:09:29.713Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://runlin-wang.github.io"/>
     <link rel="self" href="https://runlin-wang.github.io/atom.xml"/>
-    <subtitle>学而时习之，不亦说乎？</subtitle>
+    <subtitle>Record learning</subtitle>
     <logo>https://runlin-wang.github.io/images/avatar.png</logo>
     <icon>https://runlin-wang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Mr.lin</rights>
+    <entry>
+        <title type="html"><![CDATA[📚Git 学习笔记]]></title>
+        <id>https://runlin-wang.github.io/post/study_git/</id>
+        <link href="https://runlin-wang.github.io/post/study_git/">
+        </link>
+        <updated>2020-05-18T18:30:40.000Z</updated>
+        <summary type="html"><![CDATA[<p>💥入门简单<br>
+🦴配合运用还要点儿技术</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>💥入门简单<br>
+🦴配合运用还要点儿技术</p>
+<!-- more -->
+<p>练习 git 笔记：<br>
+// Git 学习笔记</p>
+<ul>
+<li>git add               把文件传入暂存区</li>
+<li>git status			查看仓库状态 、 掌握工作区状态</li>
+<li>git commit -m &quot;&quot;从暂存区添加到仓库</li>
+<li>git diff			       查看 difference 、 查看修改内容</li>
+<li>git reset --hard &lt; commit_id &gt;	在历史版本中穿梭</li>
+<li>git log				 查看提交历史</li>
+<li>git reflog			查看历史命令</li>
+<li>git checkout 		丢弃工作区修改</li>
+<li>git reset HEAD <file>	将当前 HEAD 重置为指定状态</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Windows清屏命令]]></title>
         <id>https://runlin-wang.github.io/post/windows-cls/</id>
         <link href="https://runlin-wang.github.io/post/windows-cls/">
         </link>
         <updated>2020-05-12T03:12:42.000Z</updated>
-        <summary type="html"><![CDATA[<p>✅ Windows下 == python , mysql  == 清屏命令</p>
+        <summary type="html"><![CDATA[<p>📎 PS：Windows下 == python , mysql  == 清屏命令</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>✅ Windows下 == python , mysql  == 清屏命令</p>
+        <content type="html"><![CDATA[<p>📎 PS：Windows下 == python , mysql  == 清屏命令</p>
 <!-- more -->
 <h2 id="python">python</h2>
 <p><strong>version:</strong> 3.8.2</p>
