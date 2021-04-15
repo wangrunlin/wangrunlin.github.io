@@ -1,217 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" >
-
-<title>Mr.lin</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://runlin-wang.github.io/favicon.ico?v=1594481854562">
-<link rel="stylesheet" href="https://runlin-wang.github.io/styles/main.css">
-
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-
-
-    <meta name="description" content="Record learning">
-    
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    
-  </head>
-  <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://runlin-wang.github.io">
-        <img src="https://runlin-wang.github.io/images/avatar.png?v=1594481854562" class="site-logo">
-        <h1 class="site-title">Mr.lin</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      Record learning
-    </div>
-    <div class="site-footer">
-      心若止水，静若幽兰 | <a class="rss" href="https://runlin-wang.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
-
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://runlin-wang.github.io/post/study_git/">
-                  <h2 class="post-title">📚Git 学习笔记</h2>
-                </a>
-                <div class="post-date">
-                  2020-05-19
-                </div>
-                <div class="post-abstract">
-                  <p>💥入门简单<br>
-🦴配合运用还要点儿技术</p>
-
-                </div>
-              </div>
-              
-                <a class="right" href="https://runlin-wang.github.io/post/study_git/">
-                  <div class="feature-container" style="background-image: url('data:image/jpeg;base64,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')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://runlin-wang.github.io/post/windows-cls/">
-                  <h2 class="post-title">Windows清屏命令</h2>
-                </a>
-                <div class="post-date">
-                  2020-05-12
-                </div>
-                <div class="post-abstract">
-                  <p>📎 PS：Windows下 == python , mysql  == 清屏命令</p>
-
-                </div>
-              </div>
-              
-                <a class="right" href="https://runlin-wang.github.io/post/windows-cls/">
-                  <div class="feature-container" style="background-image: url('https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://runlin-wang.github.io/post/hello-world/">
-                  <h2 class="post-title">Hello World!</h2>
-                </a>
-                <div class="post-date">
-                  2020-05-12
-                </div>
-                <div class="post-abstract">
-                  <p><mark>C, C++, Java, Python</mark> 的第一个程序 <mark>Hello World!</mark></p>
-
-                </div>
-              </div>
-              
-                <a class="right" href="https://runlin-wang.github.io/post/hello-world/">
-                  <div class="feature-container" style="background-image: url('https://runlin-wang.github.io/post-images/hello-world.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://runlin-wang.github.io/post/began-to-write/">
-                  <h2 class="post-title">📝 Began to write! 📚</h2>
-                </a>
-                <div class="post-date">
-                  2020-05-12
-                </div>
-                <div class="post-abstract">
-                  <p>💥  个人博客第一天<br>
-🎈  开始学习，开始创作<br>
-📌 分享学习笔记和生活日常</p>
-
-                </div>
-              </div>
-              
-                <a class="right" href="https://runlin-wang.github.io/post/began-to-write/">
-                  <div class="feature-container" style="background-image: url('https://runlin-wang.github.io/post-images/began-to-write.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
-
-          <div class="pagination-container">
-  
-  
-</div>
-
-        </div>
-      </div>
-    </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
-
-AOS.init();
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
-</script>
-
-
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
-
-
-
-
-
-  </body>
-</html>
+<!DOCTYPE html><html lang="en"><head><title>Leo's blog</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><meta name="theme-color" content="#222325"><meta name="apple-mobile-web-app-status-bar-style" content="#222325"><meta name="msapplication-navbutton-color" content="#222325"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Tomotoes/font/font.min.css"><link rel="stylesheet" href="css/style.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="prefetch" href="https://cdn.jsdelivr.net/"><meta name="description" content="Author:LeoWang,Category:Personal Blog"><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><!--[if lt IE 9]><style>.alert { padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px } .alert-danger { background-color: #f2dede; border-color: #ebccd1; color: #a94442; border-bottom: 1px solid #ebccd1 } .alert-link { color: #843534; font-weight: bold } .topframe { margin: 0; padding-left: 15px; padding-right: 15px; text-align: center; border-radius: 0; position: fixed; left: 0; right: 0; top: 0; z-index: 1000 }
+</style><div class="alert alert-danger topframe">你的浏览器实在<strong>太太太太太太旧了</strong>，放学别走，升级完浏览器再说<a class="alert-link" target="_blank" href="http://browsehappy.com">立即升级</a></div><script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script><script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--></head></html><body><main><div class="content content-intro"><div class="content-inner"><canvas id="background"></canvas><div class="wrap fade"><a class="github-corner" href="https://github.com/Tomotoes/HomePage" aria-label="View source on GitHub" target="_blank" rel="noopener noreferrer"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:transparent; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0 0 115 115 130 115 142 142 250 250 250 0Z"></path><path class="octo-arm" d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentColor" style="transform-origin: 130px 106px;"></path><path class="octo-body" d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4L133.7 101.6C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8Z" fill="currentColor"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style><h2 class="content-title">Leo Wang</h2><h3 class="content-subtitle" original-content="不知则问，不会则学。">&nbsp;</h3><a class="enter">enter</a><div class="arrow arrow-1"></div><div class="arrow arrow-2"></div></div></div><div class="shape-wrap"><svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns:pathdata="http://www.codrops.com/"><path d="M-44-50C-52.71 28.52 15.86 8.186 184 14.69 383.3 22.39 462.5 12.58 638 14 835.5 15.6 987 6.4 1194 13.86 1661 30.68 1652-36.74 1582-140.1 1512-243.5 15.88-589.5-44-50Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path></svg></div></div><div class="content content-main"><div id="card"><div class="card-inner fade"><header><img src="assets/avatar.jpg" width="100" height="100" alt="avatar"><h1 data-translate="name">Leo Wang</h1><h2 id="signature" data-translate="signature">Code &amp; Input &amp; Output</h2></header><ul><li><a href="blog/" aria-label="Blog"><i class="icon icon-bokeyuan"></i><span data-translate="Blog">Blog</span></a></li><li><a href="about/" aria-label="About"><i class="icon icon-xiaolian"></i><span data-translate="About">About</span></a></li><li><a href="mailto:leo@runlin.live" aria-label="Email" target="_blank"><i class="icon icon-email"></i><span data-translate="Email">Email</span></a></li><li><a href="https://github.com/runlin-wang" aria-label="GitHub" target="_blank"><i class="icon icon-github"></i><span data-translate="GitHub">GitHub</span></a></li></ul></div></div></div><script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script><script>window.$ = selector => document.querySelector(selector)
+const getOriginalContent = selector => $(selector).getAttribute("original-content")
+window.subtitle = getOriginalContent(".content-subtitle")
+window.signature = getOriginalContent("#signature")
+window.config = {
+	SIM_RESOLUTION: 128,
+	DYE_RESOLUTION: 1024,
+	CAPTURE_RESOLUTION: 512,
+	DENSITY_DISSIPATION: 1,
+	VELOCITY_DISSIPATION: 0.2,
+	PRESSURE: 0.8,
+	PRESSURE_ITERATIONS: 20,
+	CURL: 30,
+	SPLAT_RADIUS: 0.25,
+	SPLAT_FORCE: 6000,
+	SHADING: true,
+	COLORFUL: true,
+	COLOR_UPDATE_SPEED: 10,
+	PAUSED: false,
+	BACK_COLOR: { r: 30, g: 31, b: 33 },
+	TRANSPARENT: false,
+	BLOOM: true,
+	BLOOM_ITERATIONS: 8,
+	BLOOM_RESOLUTION: 256,
+	BLOOM_INTENSITY: 0.4,
+	BLOOM_THRESHOLD: 0.8,
+	BLOOM_SOFT_KNEE: 0.7,
+	SUNRAYS: true,
+	SUNRAYS_RESOLUTION: 196,
+	SUNRAYS_WEIGHT: 1.0,
+}
+</script><script src="js/main.js"></script><script src="js/background.js"></script><script src="https://cdn.jsdelivr.net/gh/runlin-wang/js/log.min.js"></script></main></body>
