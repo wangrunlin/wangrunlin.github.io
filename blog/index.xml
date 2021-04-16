@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leo&#39;s blog</title>
+    <link>https://runlin.live/blog/</link>
+    <description>Recent content on Leo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Apr 2021 22:29:51 +0800</lastBuildDate>
+    
+        <atom:link href="https://runlin.live/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于</title>
+      <link>https://runlin.live/blog/about/</link>
+      <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://runlin.live/blog/about/</guid>
+      
+        <description>&lt;p&gt;Nothing.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>兜兜转转还是回到这里</title>
+      <link>https://runlin.live/blog/post/210416_hugo_blog/</link>
+      <pubDate>Fri, 16 Apr 2021 22:29:51 +0800</pubDate>
+      
+      <guid>https://runlin.live/blog/post/210416_hugo_blog/</guid>
+      
+        <description>&lt;p&gt;个人博客最重要的是坚持。&lt;/p&gt;
+&lt;h2 id=&#34;博客平台的选择&#34;&gt;博客平台的选择&lt;/h2&gt;
+&lt;p&gt;尝试过很多静态站点生成器，如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hugo&lt;/li&gt;
+&lt;li&gt;Hexo&lt;/li&gt;
+&lt;li&gt;Gridea&lt;/li&gt;
+&lt;li&gt;WordPress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以及一些博客平台:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CSDN&lt;/li&gt;
+&lt;li&gt;简书&lt;/li&gt;
+&lt;li&gt;微信公众号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;gridea&#34;&gt;Gridea&lt;/h3&gt;
+&lt;p&gt;最开始使用 Gridea + GitHub Pages, 花了一点儿时间选了一个简单的主题就写了几篇短小的没什么技术含量的博客。
+不过当时还是很开心的，看到自己的网站运行出来的感觉，那种激动的心情现在也是觉得很棒。&lt;/p&gt;
+&lt;h3 id=&#34;wordpress&#34;&gt;WordPress&lt;/h3&gt;
+&lt;p&gt;后来由于参加学校里的创新创业大赛，购买了自己的云主机空间以及自己的第一个域名 &lt;code&gt;bloglin.top&lt;/code&gt;，当时花了小一百大洋，
+hah， .top 的域名还是很便宜的，我买了一年的只花了 6 元，主要是云主机空间小贵。&lt;/p&gt;
+&lt;p&gt;购买了域名和云主机空间后，就使用 WordPress 搭建了自己的博客站点以及当时的一个项目网站，现在想想我还是有些许运维天赋嘛。&lt;/p&gt;
+&lt;p&gt;后来觉得 WordPress 的网站不够 Geek 且占用空间较大，于是开始寻找静态博客生成器，当时就尝试了 Hugo、Hexo&amp;hellip;，
+也是在那个时候选择了 Hexo ，不过当时由于不喜欢最开始选择的那个主题还有配置文件没怎么搞懂的原因又耽误下来了。&lt;/p&gt;
+&lt;h3 id=&#34;vimwiki&#34;&gt;VimWiki&lt;/h3&gt;
+&lt;p&gt;后来学习到了 Vim，现在一直在用 VimWiki 管理笔记，还是很方便的。&lt;/p&gt;
+&lt;h3 id=&#34;now&#34;&gt;Now&lt;/h3&gt;
+&lt;p&gt;由于觉得买的域名和服务器拿来不用就亏了的心理，又跑来搭建博客了。&lt;/p&gt;
+&lt;p&gt;最终还是选择了 Hugo + GitHub Pages。&lt;/p&gt;
+&lt;p&gt;话说 Github Pages 是真的不错，还能给你自动签发 ssl 证书，老爽了，零成本，好评。&lt;/p&gt;
+&lt;p&gt;为什么要选择自己搭建静态博客呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自定义程度高，不受平台约束。&lt;/li&gt;
+&lt;li&gt;比较 &lt;code&gt;Geek&lt;/code&gt;（hah）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么选择 Hugo ?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;个人比较喜欢 Golang&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;对于写博客的理解&#34;&gt;对于写博客的理解&lt;/h2&gt;
+&lt;p&gt;博客最重要的真的不是外观花里胡哨，而是内容足够干货。&lt;/p&gt;
+&lt;p&gt;这一点我花了一年多的时间才理解。&lt;/p&gt;
+&lt;p&gt;不过虽然说外观不是最重要，不过直接看 txt ，还没有进行过排版的那种还是很难受的嘛。&lt;/p&gt;
+&lt;p&gt;现在会在 VimWiki 记日记，有比较不错的点再写成文章出来分享吧。&lt;/p&gt;
+&lt;p&gt;坚持下去才是正经的。&lt;/p&gt;
+&lt;h2 id=&#34;flag&#34;&gt;Flag&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;坚持三年，写上三个年度总结。&lt;/li&gt;
+&lt;li&gt;每月至少一篇产出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;引用链接&#34;&gt;引用链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hexo.io/zh-cn/&#34;&gt;Hexo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cn.wordpress.org/&#34;&gt;WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vimwiki/vimwiki&#34;&gt;VimWiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Tmux 使用手册</title>
+      <link>https://runlin.live/blog/post/210316_tmux/</link>
+      <pubDate>Tue, 16 Mar 2021 01:09:00 +0800</pubDate>
+      
+      <guid>https://runlin.live/blog/post/210316_tmux/</guid>
+      
+        <description>&lt;p&gt;tmux 基础操作与快捷键&lt;/p&gt;
+&lt;h1 id=&#34;tmux-使用手册&#34;&gt;tmux 使用手册&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ruanyifeng.com/blog/2019/10/tmux.html&#34;&gt;Tmux 使用教程&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;command&#34;&gt;command&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux ls &lt;/code&gt;
+&lt;code&gt;tmux list-sessions&lt;/code&gt;   - 查看当前所有的 Tmux 会话。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;tmux attach-session&lt;/code&gt; - 重新接入会话&lt;/p&gt;
+&lt;h2 id=&#34;窗格操作&#34;&gt;窗格操作&lt;/h2&gt;
+&lt;p&gt;Ctrl+b&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;d: 退出&lt;/li&gt;
+&lt;li&gt;%：划分左右两个窗格。&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;：划分上下两个窗格。&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;：光标切换到其他窗格。&lt;!-- raw HTML omitted --&gt;是指向要切换到的窗格的方向键，比如切换到下方窗格，就按方向键↓。&lt;/li&gt;
+&lt;li&gt;;：光标切换到上一个窗格。&lt;/li&gt;
+&lt;li&gt;o：光标切换到下一个窗格。&lt;/li&gt;
+&lt;li&gt;{：当前窗格与上一个窗格交换位置。&lt;/li&gt;
+&lt;li&gt;}：当前窗格与下一个窗格交换位置。&lt;/li&gt;
+&lt;li&gt;Ctrl+o：所有窗格向前移动一个位置，第一个窗格变成最后一个窗格。&lt;/li&gt;
+&lt;li&gt;Alt+o：所有窗格向后移动一个位置，最后一个窗格变成第一个窗格。&lt;/li&gt;
+&lt;li&gt;x：关闭当前窗格。&lt;/li&gt;
+&lt;li&gt;!：将当前窗格拆分为一个独立窗口。&lt;/li&gt;
+&lt;li&gt;z：当前窗格全屏显示，再使用一次会变回原来大小。&lt;/li&gt;
+&lt;li&gt;Ctrl+&lt;!-- raw HTML omitted --&gt;：按箭头方向调整窗格大小。&lt;/li&gt;
+&lt;li&gt;q：显示窗格编号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;窗口快捷键&#34;&gt;窗口快捷键&lt;/h2&gt;
+&lt;p&gt;Ctrl+b&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;c：创建一个新窗口，状态栏会显示多个窗口的信息。&lt;/li&gt;
+&lt;li&gt;p：切换到上一个窗口（按照状态栏上的顺序）。&lt;/li&gt;
+&lt;li&gt;n：切换到下一个窗口。&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;：切换到指定编号的窗口，其中的&lt;!-- raw HTML omitted --&gt;是状态栏上的窗口编号。&lt;/li&gt;
+&lt;li&gt;w：从列表中选择窗口。&lt;/li&gt;
+&lt;li&gt;,：窗口重命名。&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Vim 操作小提示</title>
+      <link>https://runlin.live/blog/post/210314_vim_tips/</link>
+      <pubDate>Sun, 14 Mar 2021 01:10:53 +0800</pubDate>
+      
+      <guid>https://runlin.live/blog/post/210314_vim_tips/</guid>
+      
+        <description>&lt;p&gt;Vim 操作小提示&lt;/p&gt;
+&lt;h1 id=&#34;vim-tips&#34;&gt;Vim Tips&lt;/h1&gt;
+&lt;h2 id=&#34;setting&#34;&gt;setting&lt;/h2&gt;
+&lt;h2 id=&#34;tips&#34;&gt;tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;:r! &lt;!-- raw HTML omitted --&gt;       &amp;ndash; 将外部命令的结果插入到光标下&lt;/li&gt;
+&lt;li&gt;:verbose imap &lt;!-- raw HTML omitted --&gt; &amp;ndash; 查看快捷键绑定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;plug&#34;&gt;Plug&lt;/h2&gt;
+&lt;h3 id=&#34;vimwiki-shortcuts&#34;&gt;vimwiki shortcuts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;ws         &amp;ndash; 打开 vimwiki buffers&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;ww         &amp;ndash; 打开 wiki 主页&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;wi         &amp;ndash; 打开当前 wiki diary 主页&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;wr         &amp;ndash; rename 当前页面&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;w&lt;!-- raw HTML omitted --&gt;i &amp;ndash; 更新当前 wiki diary 主页&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;w&lt;!-- raw HTML omitted --&gt;w &amp;ndash; 打开今天的日记（open today diary）&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;w&lt;!-- raw HTML omitted --&gt;t &amp;ndash; 在新 tab 打开今天的日记（open today diary in new tab）&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;w&lt;!-- raw HTML omitted --&gt;y &amp;ndash; 打开昨天的日记（open yesterday diary）&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;w&lt;!-- raw HTML omitted --&gt;m &amp;ndash; 打开明天的日记（open tomorrow diary）&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

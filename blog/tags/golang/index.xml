@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Leo&#39;s blog</title>
+    <link>https://runlin.live/blog/tags/golang/</link>
+    <description>Recent content in Golang on Leo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Apr 2021 22:29:51 +0800</lastBuildDate><atom:link href="https://runlin.live/blog/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>兜兜转转还是回到这里</title>
+      <link>https://runlin.live/blog/post/210416_hugo_blog/</link>
+      <pubDate>Fri, 16 Apr 2021 22:29:51 +0800</pubDate>
+      
+      <guid>https://runlin.live/blog/post/210416_hugo_blog/</guid>
+      <description>&lt;p&gt;个人博客最重要的是坚持。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
