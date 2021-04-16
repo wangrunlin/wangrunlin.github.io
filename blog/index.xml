@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Leo&#39;s blog</title>
+    <title>Leo 的博客</title>
     <link>https://runlin.live/blog/</link>
-    <description>Recent content on Leo&#39;s blog</description>
+    <description>Recent content on Leo 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 16 Apr 2021 22:29:51 +0800</lastBuildDate>

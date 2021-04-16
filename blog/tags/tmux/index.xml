@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tmux on Leo&#39;s blog</title>
+    <title>Tmux on Leo 的博客</title>
     <link>https://runlin.live/blog/tags/tmux/</link>
-    <description>Recent content in Tmux on Leo&#39;s blog</description>
+    <description>Recent content in Tmux on Leo 的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 16 Mar 2021 01:09:00 +0800</lastBuildDate><atom:link href="https://runlin.live/blog/tags/tmux/index.xml" rel="self" type="application/rss+xml" />
