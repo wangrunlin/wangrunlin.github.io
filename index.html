@@ -92,9 +92,28 @@
   </ul>
 
   <footer>
-    <p>Copyright © 2022 Leo Wang</p>
-    <p><a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2021022525号</a></p>
+    <p>
+      Copyright © 
+      <span id="current-year"></span>
+      Leo Wang
+    </p>
+    <p style="display: none;" id="beian"><a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2021022525号</a></p>
   </footer>
+  <script>
+    // render current year
+    document.querySelector("#current-year").innerHTML = new Date().getFullYear();
+
+    const beianWebsites = [
+      "www.llin.cc",
+      "llin.cc",
+      "www.alin.run",
+      "alin.run",
+    ];
+    if (beianWebsites.includes(window.location.hostname)) {
+      // show beian footer
+      document.querySelector("#beian").style.display = 'block';
+    }
+  </script>
 </body>
 
 </html>
