@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { Content as NowMarkdown } from "./now.md";
+---
+
+<BaseLayout
+  title="Now | Leo Wang"
+  description="Now living, working, and playing."
+>
+  <div class="now-content">
+    <!-- {nowMarkdown.Content} -->
+    <NowMarkdown class="now-content" />
+  </div>
+</BaseLayout>
+
+<style>
+  .now-content {
+    /* max-width: 30rem; */
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+    h1,
+    h2,
+    h3 {
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+</style>
