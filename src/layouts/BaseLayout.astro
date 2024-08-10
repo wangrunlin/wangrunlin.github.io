@@ -6,6 +6,7 @@
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 interface Props {
 	title?: string | undefined;
@@ -13,11 +14,13 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const isProd = import.meta.env.PROD;
 ---
 
 <html lang="en">
 	<head>
 		<MainHead title={title} description={description} />
+		{isProd && <GoogleAnalytics />}
 	</head>
 	<body>
 		<div class="stack backgrounds">
