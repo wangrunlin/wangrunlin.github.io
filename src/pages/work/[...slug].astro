@@ -1,12 +1,12 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 
-import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
-import ContactCTA from "../../../components/ContactCTA.astro";
-import Hero from "../../../components/Hero.astro";
-import Icon from "../../../components/Icon.astro";
-import Pill from "../../../components/Pill.astro";
+import ContactCTA from "../../components/ContactCTA.astro";
+import Hero from "../../components/Hero.astro";
+import Icon from "../../components/Icon.astro";
+import Pill from "../../components/Pill.astro";
 
 interface Props {
   entry: CollectionEntry<"work">;
@@ -17,22 +17,10 @@ interface Props {
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
   const work = await getCollection("work");
-  return work
-    .map((entry) => [
-      {
-        params: { slug: entry.slug, lang: "en" },
-        props: { entry },
-      },
-      {
-        params: { slug: entry.slug, lang: "zh-cn" },
-        props: { entry },
-      },
-      {
-        params: { slug: entry.slug, lang: "zh-tw" },
-        props: { entry },
-      },
-    ])
-    .flat();
+  return work.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;

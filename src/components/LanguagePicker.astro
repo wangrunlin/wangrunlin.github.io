@@ -4,6 +4,7 @@ import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
+const url = Astro.url.pathname.replace(/^\/(en|zh-cn|zh-tw)/, "");
 ---
 
 <div class="language-picker">
@@ -11,7 +12,7 @@ const translatePath = useTranslatedPath(lang);
     {
       Object.entries(languages).map(([lang, label]) => (
         <li>
-          <a href={translatePath("/", lang)}>{label}</a>
+          <a href={translatePath(url, lang)}>{label}</a>
         </li>
       ))
     }

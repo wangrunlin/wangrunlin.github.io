@@ -1,8 +1,14 @@
 ---
-import Hero from '../../components/Hero.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import NotFoundPage from "../404.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en" } },
+    { params: { lang: "zh-cn" } },
+    { params: { lang: "zh-tw" } },
+  ];
+}
+const { lang } = Astro.params;
 ---
 
-<BaseLayout title="Not Found" description="404 Error — this page was not found">
-	<Hero title="Page Not Found" tagline="Not found" />
-</BaseLayout>
+<NotFoundPage />

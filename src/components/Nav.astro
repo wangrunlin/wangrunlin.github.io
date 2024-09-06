@@ -2,13 +2,18 @@
 import Icon from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import type { iconPaths } from "./IconPaths";
+import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+import { languagesRegex } from "../i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-  { label: "Home", href: "/" },
-  { label: "Work", href: "/work/" },
-  { label: "About", href: "/about/" },
-  { label: "Now", href: "/now/" },
+  { label: "Home", href: translatePath("/") },
+  { label: "Work", href: translatePath("/work/") },
+  { label: "About", href: translatePath("/about/") },
+  { label: "Now", href: translatePath("/now/") },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -44,6 +49,13 @@ const iconLinks: {
   // { label: 'xiaohongshu', href: 'https://www.xiaohongshu.com', icon: 'xiaohongshu-logo' },
   { label: "wechat", href: "/wechat.png", icon: "wechat-logo" },
 ];
+
+const isActive = (href: string) => {
+  const pathname = Astro.url.pathname.replace(languagesRegex, "");
+  href = href.replace(languagesRegex, "");
+
+  return pathname === href || (href !== "/" && pathname.startsWith(href));
+};
 ---
 
 <nav>
@@ -73,14 +85,7 @@ const iconLinks: {
           <li>
             <a
               aria-current={Astro.url.pathname === href}
-              class:list={[
-                "link",
-                {
-                  active:
-                    Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
-                },
-              ]}
+              class:list={["link", { active: isActive(href) }]}
               href={href}
             >
               {label}
@@ -111,14 +116,7 @@ const iconLinks: {
           <li>
             <a
               aria-current={Astro.url.pathname === href}
-              class:list={[
-                "link",
-                {
-                  active:
-                    Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
-                },
-              ]}
+              class:list={["link", { active: isActive(href) }]}
               href={href}
             >
               {label}
