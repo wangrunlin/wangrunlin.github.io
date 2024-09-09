@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -16,21 +16,26 @@ import PortfolioPreview from "../components/PortfolioPreview.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import Skills from "../components/Skills.astro";
 
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
-
-// Content Fetching: List four most recent work projects
-const projects = (await getCollection("work"))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 4);
-
-// Full Astro Component Syntax:
-// https://docs.aimport { getLangFromUrl, useTranslations } from '../i18n/utils';
-
-// Astro.currentLocale
-console.log("Astro.currentLocale", Astro.currentLocale);
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
+import { languagesRegex } from "../i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+// Content Fetching: List four most recent work projects
+const projects = (await getCollection("work"))
+  .filter(({ slug }) => slug.startsWith(lang))
+  .map(({ slug, ...rest }) => ({
+    slug: slug.replace(languagesRegex, ""),
+    ...rest,
+  }))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+  .slice(0, 4);
 ---
 
 <BaseLayout>
@@ -75,7 +80,9 @@ const t = useTranslations(lang);
             {
               projects.map((project) => (
                 <li>
-                  <PortfolioPreview project={project} />
+                  <PortfolioPreview
+                    project={project as CollectionEntry<"work">}
+                  />
                 </li>
               ))
             }
@@ -83,8 +90,8 @@ const t = useTranslations(lang);
         </div>
 
         <div class="cta">
-          <CallToAction href="/work/">
-            View All
+          <CallToAction href={translatePath("/work/")}>
+            {t("home.viewAll")}
             <Icon icon="arrow-right" size="1.2em" />
           </CallToAction>
         </div>

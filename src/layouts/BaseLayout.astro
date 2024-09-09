@@ -127,11 +127,3 @@ const lang = getLangFromUrl(Astro.url);
     </style>
   </body>
 </html>
-
-<!-- add language change event listener -->
-<script>
-  window.addEventListener("languagechange", () => {
-    console.log("languagechange");
-    console.log(navigator.language);
-  });
-</script>

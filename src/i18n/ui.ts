@@ -1,6 +1,6 @@
 export const showDefaultLang = false;
 
-export const languagesRegex = /^\/(en|zh-cn|zh-tw)/;
+export const languagesRegex = /^\/?(en|zh-cn|zh-tw)/;
 
 export const languages = {
   en: "English",
@@ -17,6 +17,7 @@ export const ui = {
     "home.title": "Hello, my name is Leo Wang",
     "home.description":
       "I am a Creative Developer who is currently based in China.",
+    "home.viewAll": "View All",
     "about.title": "About",
     "about.description":
       "Thanks for stopping by. Read below to learn more about myself and my background.",
@@ -36,6 +37,7 @@ export const ui = {
     notFound: "未找到",
     "home.title": "你好，我的名字是王润林（阿林）",
     "home.description": "我是一个创意开发者，目前居住在中国。",
+    "home.viewAll": "查看所有",
     "about.title": "关于",
     "about.description":
       "感谢您的访问。阅读以下内容，了解更多关于我自己的背景。",
@@ -54,6 +56,7 @@ export const ui = {
     notFound: "未找到",
     "home.title": "你好，我的名字是王潤林（阿林）",
     "home.description": "我是一個創意開發者，目前居住在中國。",
+    "home.viewAll": "查看所有",
     "about.title": "關於",
     "about.description":
       "感謝您的訪問。閱讀以下內容，了解更多關於我自己的背景。",
