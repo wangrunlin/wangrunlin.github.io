@@ -20,7 +20,7 @@ export const ui = {
     notFound: "Not Found",
     life: "Life",
     study: "Study",
-    "home.title": "你好，我的名字是王润林（阿林）",
+    "home.title": "Hi, my name is Leo Wang",
     "home.description":
       "I am a Creative Developer who is currently based in China.",
     "home.viewAll": "View All",

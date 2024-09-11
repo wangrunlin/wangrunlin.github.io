@@ -1,10 +1,22 @@
 ---
+import { iconLinks } from "../content/data";
 import Icon from "./Icon.astro";
-import LanguagePicker from "./LanguagePicker.astro";
+
 const currentYear = new Date().getFullYear();
 ---
 
 <footer>
+  <div class="socials">
+    {
+      iconLinks.map(({ href, icon, label }) => (
+        <a href={href} class="social">
+          <span class="sr-only">{label}</span>
+          <Icon icon={icon} />
+        </a>
+      ))
+    }
+  </div>
+
   <div class="group">
     <p>
       Designed & Developed with <a href="https://astro.build/">Astro</a>
@@ -12,14 +24,12 @@ const currentYear = new Date().getFullYear();
     </p>
     <p>&copy; {currentYear} Leo Wang</p>
   </div>
-  <p class="socials">
-    <a href="https://twitter.com/wangrunlin_"> X / Twitter</a>
-    <a href="https://github.com/wangrunlin"> GitHub</a>
-  </p>
-  <LanguagePicker />
 </footer>
+
 <style>
   footer {
+    --icon-size: var(--text-xl);
+
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -50,9 +60,23 @@ const currentYear = new Date().getFullYear();
 
   .socials {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 0.625rem;
+    font-size: var(--icon-size);
+    justify-content: center;
+  }
+
+  .social {
+    display: flex;
+    padding: var(--icon-padding);
+    text-decoration: none;
+    color: var(--accent-dark);
+    transition: color var(--theme-transition);
+  }
+
+  .social:hover,
+  .social:focus {
+    color: var(--accent-text-over);
   }
 
   @media (min-width: 50em) {
@@ -66,10 +90,6 @@ const currentYear = new Date().getFullYear();
       flex-direction: row;
       gap: 1rem;
       flex-wrap: wrap;
-    }
-
-    .socials {
-      justify-content: flex-end;
     }
   }
 </style>

@@ -1,20 +1,96 @@
 ---
 import { languages } from "../i18n/ui";
-import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+import { getLangFromUrl } from "../i18n/utils";
 
-const lang = getLangFromUrl(Astro.url);
-const translatePath = useTranslatedPath(lang);
-const url = Astro.url.pathname.replace(/^\/(en|zh-cn|zh-tw)/, "");
+const currentLang = getLangFromUrl(Astro.url);
 ---
 
 <div class="language-picker">
-  <ul>
+  <select id="language-select">
     {
       Object.entries(languages).map(([lang, label]) => (
-        <li>
-          <a href={translatePath(url, lang)}>{label}</a>
-        </li>
+        <option value={lang} selected={lang === currentLang}>
+          {label}
+        </option>
       ))
     }
-  </ul>
+  </select>
 </div>
+
+<script>
+  import { languages, languagesRegex } from "../i18n/ui";
+  import { useTranslatedPath } from "../i18n/utils";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const select = document.getElementById("language-select");
+    select?.addEventListener("change", (event) => {
+      const lang = (event.target as HTMLSelectElement)
+        .value as keyof typeof languages;
+
+      console.log("language changed", lang);
+
+      const translatePath = useTranslatedPath(lang);
+      const path = window.location.pathname;
+      const newPath = translatePath(path.replace(languagesRegex, ""), lang);
+      window.location.href = newPath;
+    });
+  });
+</script>
+
+<style>
+  .language-picker {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .language-picker :global(svg) {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--gray-300);
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: var(--gray-999);
+    border: 1px solid var(--gray-800);
+    border-radius: 1rem;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: var(--gray-200);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  select:hover,
+  select:focus {
+    background-color: var(--gray-800);
+    border-color: var(--accent-regular);
+  }
+
+  .language-picker::after {
+    content: "▼";
+    font-size: 0.7rem;
+    color: var(--gray-300);
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  @media (max-width: 50em) {
+    select {
+      font-size: 0.8rem;
+      padding: 0.4rem 1.8rem 0.4rem 0.8rem;
+    }
+
+    .language-picker::after {
+      right: 0.8rem;
+    }
+  }
+</style>

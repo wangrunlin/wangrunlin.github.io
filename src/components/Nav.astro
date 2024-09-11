@@ -1,13 +1,13 @@
 ---
 import Icon from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
-import type { iconPaths } from "./IconPaths";
 import {
   getLangFromUrl,
   useTranslatedPath,
   useTranslations,
 } from "../i18n/utils";
 import { languagesRegex } from "../i18n/ui";
+import LanguagePicker from "./LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -19,40 +19,6 @@ const textLinks: { label: string; href: string }[] = [
   { label: t("work"), href: translatePath("/work/") },
   { label: t("about"), href: translatePath("/about/") },
   { label: t("now"), href: translatePath("/now/") },
-];
-
-/** Icon links to social media — edit these with links to your profiles! */
-const iconLinks: {
-  label: string;
-  href: string;
-  icon: keyof typeof iconPaths;
-}[] = [
-  { label: "X / Twitter", href: "https://x.com/wangrunlin_", icon: "x-logo" },
-  {
-    label: "GitHub",
-    href: "https://github.com/wangrunlin",
-    icon: "github-logo",
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/alin.run/",
-    icon: "instagram-logo",
-  },
-  {
-    label: "YouTube",
-    href: "https://www.youtube.com/@wangrunlin/",
-    icon: "youtube-logo",
-  },
-  { label: "Telegram", href: "https://t.me/wangrunlin", icon: "telegram-logo" },
-  {
-    label: "Mastodon",
-    href: "https://mastodon.social/@wangrunlin",
-    icon: "mastodon-logo",
-  },
-  // { label: 'Douban', href: 'https://www.douban.com/wangrunlin/', icon: 'douban-logo' },
-  // { label: 'Bilibili', href: 'https://www.bilibili.com', icon: 'bilibili-logo' },
-  // { label: 'xiaohongshu', href: 'https://www.xiaohongshu.com', icon: 'xiaohongshu-logo' },
-  { label: "wechat", href: "/wechat.png", icon: "wechat-logo" },
 ];
 
 const isActive = (href: string) => {
@@ -100,20 +66,6 @@ const isActive = (href: string) => {
       }
     </ul>
   </noscript>
-  <noscript>
-    <div class="menu-footer">
-      <div class="socials">
-        {
-          iconLinks.map(({ href, icon, label }) => (
-            <a href={href} class="social">
-              <span class="sr-only">{label}</span>
-              <Icon icon={icon} />
-            </a>
-          ))
-        }
-      </div>
-    </div>
-  </noscript>
   <div id="menu-content" hidden>
     <ul class="nav-items">
       {
@@ -131,19 +83,12 @@ const isActive = (href: string) => {
       }
     </ul>
     <div class="menu-footer">
-      <div class="socials">
-        {
-          iconLinks.map(({ href, icon, label }) => (
-            <a href={href} class="social">
-              <span class="sr-only">{label}</span>
-              <Icon icon={icon} />
-            </a>
-          ))
-        }
-      </div>
-
       <div class="theme-toggle">
         <ThemeToggle />
+      </div>
+
+      <div class="language-toggle">
+        <LanguagePicker />
       </div>
     </div>
   </div>
@@ -284,26 +229,6 @@ const isActive = (href: string) => {
     box-shadow: var(--shadow-lg);
   }
 
-  .socials {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.625rem;
-    font-size: var(--icon-size);
-  }
-
-  .social {
-    display: flex;
-    padding: var(--icon-padding);
-    text-decoration: none;
-    color: var(--accent-dark);
-    transition: color var(--theme-transition);
-  }
-
-  .social:hover,
-  .social:focus {
-    color: var(--accent-text-over);
-  }
-
   .theme-toggle {
     display: flex;
     align-items: center;
@@ -379,19 +304,8 @@ const isActive = (href: string) => {
       background-color: transparent;
       box-shadow: none;
     }
-
-    .socials {
-      display: none;
-    }
   }
 
-  @media (min-width: 60em) {
-    .socials {
-      display: flex;
-      justify-content: flex-end;
-      gap: 0;
-    }
-  }
   @media (forced-colors: active) {
     .link.active {
       color: SelectedItem;
