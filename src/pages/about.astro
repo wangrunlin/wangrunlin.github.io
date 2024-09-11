@@ -3,10 +3,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import Icon from "../components/Icon.astro";
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <BaseLayout
@@ -14,6 +21,15 @@ const t = useTranslations(lang);
   description={t("about.description")}
 >
   <div class="stack gap-20">
+    <header>
+      <div class="wrapper stack gap-2">
+        <a class="back-link" href={translatePath("/")}>
+          <Icon icon="arrow-left" />
+          {t("home")}
+        </a>
+      </div>
+    </header>
+
     <main class="wrapper about">
       <Hero title={t("about.title")} tagline={t("about.description")}>
         <img
@@ -99,18 +115,26 @@ const t = useTranslations(lang);
     grid-column: 2 / 4;
   }
 
+  .back-link,
   .content :global(a) {
     text-decoration: 1px solid underline transparent;
     text-underline-offset: 0.25em;
     transition: text-decoration-color var(--theme-transition);
   }
 
+  .back-link:hover,
+  .back-link:focus,
   .content :global(a:hover),
   .content :global(a:focus) {
     text-decoration-color: currentColor;
   }
 
   @media (min-width: 50em) {
+    .back-link {
+      display: block;
+      align-self: flex-start;
+    }
+
     .about {
       display: grid;
       grid-template-columns: 1fr 60% 1fr;

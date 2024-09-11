@@ -26,20 +26,22 @@ const NowMarkdownContent = nowMarkdown.find(({ file }) =>
   description={t("now.description")}
 >
   <div class="stack gap-15">
-    <header>
+    <header class="stack gap-10">
       <div class="wrapper stack gap-2">
         <a class="back-link" href={translatePath("/")}>
-          <Icon icon="arrow-left" /> {t("home")}
+          <Icon icon="arrow-left" />
+          {t("home")}
         </a>
-        <Hero title={t("now.title")} align="center">
-          <div class="details">
-            <div class="tags">
-              {tags.map((tag) => <Pill>{tag}</Pill>)}
-            </div>
-            <p class="description">{t("now.description")}</p>
-          </div>
-        </Hero>
       </div>
+
+      <Hero title={t("now.title")} align="center">
+        <div class="details">
+          <div class="tags">
+            {tags.map((tag) => <Pill>{tag}</Pill>)}
+          </div>
+          <p class="description">{t("now.description")}</p>
+        </div>
+      </Hero>
     </header>
   </div>
 
@@ -95,6 +97,31 @@ const NowMarkdownContent = nowMarkdown.find(({ file }) =>
 
     h2 {
       font-size: 1.5rem;
+    }
+  }
+
+  .back-link,
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .back-link:hover,
+  .back-link:focus,
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .back-link {
+      display: block;
+      align-self: flex-start;
+    }
+
+    .content :global(blockquote) {
+      font-size: var(--text-2xl);
     }
   }
 </style>
