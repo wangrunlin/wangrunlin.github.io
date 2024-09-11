@@ -25,7 +25,7 @@ export const ui = {
     writer: "Writer",
     contact: "Contact",
     sendMeAMessage: "Send Me a Message",
-    "home.title": "Hi, my name is Leo Wang",
+    "home.title": "Hello, my name is Leo Wang",
     "home.description":
       "I am a Creative Developer who is currently based in China.",
     "home.selectedWork": "Selected Work",
