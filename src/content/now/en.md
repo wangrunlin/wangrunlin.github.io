@@ -2,7 +2,7 @@
 
 > 这是一个 [now](https://nownownow.com/about) 页面
 
-- last updated: 2024-08-23
+- last updated: 2024-09-11
 
 ## Living
 
@@ -10,9 +10,9 @@
 
 ## Doing list
 
-- Personal website
+- [Personal website](https://alin.run)
 
-- This Moment app
+- [This Moment app](/work/this-moment)
 
 - Open Source Mall
 

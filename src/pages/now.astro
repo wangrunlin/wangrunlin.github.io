@@ -2,10 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-import { Content as NowMarkdown } from "./_now.md";
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const nowMarkdown = await Astro.glob("../content/now/*.md");
+const NowMarkdownContent = nowMarkdown.find(({ file }) =>
+  file.endsWith(`${lang}.md`)
+)?.Content;
 ---
 
 <BaseLayout
@@ -13,8 +16,16 @@ const t = useTranslations(lang);
   description={t("now.description")}
 >
   <div class="now-content">
-    <!-- {nowMarkdown.Content} -->
-    <NowMarkdown class="now-content" />
+    {
+      NowMarkdownContent ? (
+        <NowMarkdownContent />
+      ) : (
+        <div>
+          Not find now content, go
+          <a href="/now">default language version</a>
+        </div>
+      )
+    }
   </div>
 </BaseLayout>
 
