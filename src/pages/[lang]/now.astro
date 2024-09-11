@@ -1,13 +1,11 @@
 ---
 import NowPage from "../now.astro";
+import { languages } from "../../i18n/ui";
 
 export function getStaticPaths() {
-  return [
-    { params: { lang: "en" } },
-    { params: { lang: "zh-cn" } },
-    { params: { lang: "zh-tw" } },
-  ];
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
+
 const { lang } = Astro.params;
 ---
 

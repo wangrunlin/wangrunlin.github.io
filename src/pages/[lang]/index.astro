@@ -1,15 +1,9 @@
 ---
 import IndexPage from "../index.astro";
+import { languages } from "../../i18n/ui";
 
-// static route
-// https://docs.astro.build/zh-cn/guides/routing/#%E9%9D%99%E6%80%81-ssg-%E6%A8%A1%E5%BC%8F
 export function getStaticPaths() {
-  // return Astro.i18n.locales.map((lang) => ({ params: { lang } }));
-  return [
-    { params: { lang: "en" } },
-    { params: { lang: "zh-cn" } },
-    { params: { lang: "zh-tw" } },
-  ];
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 const { lang } = Astro.params;
 ---
