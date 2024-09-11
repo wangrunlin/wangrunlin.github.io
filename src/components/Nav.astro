@@ -2,18 +2,23 @@
 import Icon from "./Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import type { iconPaths } from "./IconPaths";
-import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
 import { languagesRegex } from "../i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-  { label: "Home", href: translatePath("/") },
-  { label: "Work", href: translatePath("/work/") },
-  { label: "About", href: translatePath("/about/") },
-  { label: "Now", href: translatePath("/now/") },
+  { label: t("home"), href: translatePath("/") },
+  { label: t("work"), href: translatePath("/work/") },
+  { label: t("about"), href: translatePath("/about/") },
+  { label: t("now"), href: translatePath("/now/") },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -60,14 +65,14 @@ const isActive = (href: string) => {
 
 <nav>
   <div class="menu-header">
-    <a href="/" class="site-title">
+    <a href={translatePath("/")} class="site-title">
       <Icon
         icon="terminal-window"
         color="var(--accent-regular)"
         size="1.6em"
         gradient
       />
-      Leo Wang
+      {t("title")}
     </a>
     <menu-button>
       <template>

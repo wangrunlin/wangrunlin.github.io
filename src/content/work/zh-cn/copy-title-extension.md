@@ -11,5 +11,5 @@ tags:
   - Dev
 ---
 
-[GitHub](https://github.com/wangrunlin/copy-title-extension)
-[Copy Page Title - Chrome Web Store](https://chromewebstore.google.com/detail/copy-page-title/cofmmgbikdpfpdecffpknclhhlnbfnlg)
+- [GitHub](https://github.com/wangrunlin/copy-title-extension)
+- [Copy Page Title - Chrome Web Store](https://chromewebstore.google.com/detail/copy-page-title/cofmmgbikdpfpdecffpknclhhlnbfnlg)

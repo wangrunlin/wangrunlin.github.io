@@ -11,11 +11,10 @@
 ## 在做列表
 
 - [个人网站](https://alin.run/zh-cn/)
-
 - [当下时刻](/zh-cn/work/this-moment)
-
-- Open Source Mall
-
+- [复制标题扩展](/zh-cn/work/copy-title-extension)
+- [Android 复制链接](/zh-cn/work/android-copy-link)
+- 开源商城
 - DNGSN
 
 ## 电影

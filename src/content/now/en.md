@@ -1,6 +1,6 @@
 # Now page
 
-> 这是一个 [now](https://nownownow.com/about) 页面
+> This is a [now](https://nownownow.com/about) page
 
 - last updated: 2024-09-11
 
@@ -11,11 +11,10 @@
 ## Doing list
 
 - [Personal website](https://alin.run)
-
 - [This Moment app](/work/this-moment)
-
+- [Copy Title Extension](/work/copy-title-extension)
+- [Android Copy Link](/work/android-copy-link)
 - Open Source Mall
-
 - DNGSN
 
 ## Watching

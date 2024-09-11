@@ -1,9 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+import Pill from "../components/Pill.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const tags = [t("life"), t("work"), t("study")];
 
 const nowMarkdown = await Astro.glob("../content/now/*.md");
 const NowMarkdownContent = nowMarkdown.find(({ file }) =>
@@ -15,6 +25,24 @@ const NowMarkdownContent = nowMarkdown.find(({ file }) =>
   title={`${t("now.title")} | ${t("title")}`}
   description={t("now.description")}
 >
+  <div class="stack gap-15">
+    <header>
+      <div class="wrapper stack gap-2">
+        <a class="back-link" href={translatePath("/")}>
+          <Icon icon="arrow-left" /> {t("home")}
+        </a>
+        <Hero title={t("now.title")} align="center">
+          <div class="details">
+            <div class="tags">
+              {tags.map((tag) => <Pill>{tag}</Pill>)}
+            </div>
+            <p class="description">{t("now.description")}</p>
+          </div>
+        </Hero>
+      </div>
+    </header>
+  </div>
+
   <div class="now-content">
     {
       NowMarkdownContent ? (
@@ -30,6 +58,25 @@ const NowMarkdownContent = nowMarkdown.find(({ file }) =>
 </BaseLayout>
 
 <style>
+  header {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--gray-800);
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+  }
+
   .now-content {
     /* max-width: 30rem; */
     margin: 0 auto;
@@ -44,6 +91,10 @@ const NowMarkdownContent = nowMarkdown.find(({ file }) =>
 
     h1 {
       font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
     }
   }
 </style>

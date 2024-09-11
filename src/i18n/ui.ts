@@ -12,9 +12,15 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
+    home: "Home",
+    work: "Work",
+    about: "About",
+    now: "Now",
     title: "Leo Wang",
     notFound: "Not Found",
-    "home.title": "Hello, my name is Leo Wang",
+    life: "Life",
+    study: "Study",
+    "home.title": "你好，我的名字是王润林（阿林）",
     "home.description":
       "I am a Creative Developer who is currently based in China.",
     "home.viewAll": "View All",
@@ -33,8 +39,14 @@ export const ui = {
     "404.description": "404 Error — this page was not found",
   },
   "zh-cn": {
+    home: "首页",
     title: "王润林",
+    work: "工作",
+    about: "关于",
+    now: "现在",
     notFound: "未找到",
+    life: "生活",
+    study: "学习",
     "home.title": "你好，我的名字是王润林（阿林）",
     "home.description": "我是一个创意开发者，目前居住在中国。",
     "home.viewAll": "查看所有",
@@ -52,8 +64,14 @@ export const ui = {
     "404.description": "404 错误 — 此页面未找到",
   },
   "zh-tw": {
+    home: "首頁",
+    work: "工作",
+    about: "關於",
+    now: "現在",
     title: "王潤林",
     notFound: "未找到",
+    life: "生活",
+    study: "學習",
     "home.title": "你好，我的名字是王潤林（阿林）",
     "home.description": "我是一個創意開發者，目前居住在中國。",
     "home.viewAll": "查看所有",
