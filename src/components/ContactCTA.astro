@@ -1,12 +1,16 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import CallToAction from "./CallToAction.astro";
 import Icon from "./Icon.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <aside>
-  <h2>Contact</h2>
+  <h2>{t("contact")}</h2>
   <CallToAction href="mailto:me@alin.run">
-    Send Me a Message
+    {t("sendMeAMessage")}
     <Icon icon="paper-plane-tilt" size="1.2em" />
   </CallToAction>
 </aside>

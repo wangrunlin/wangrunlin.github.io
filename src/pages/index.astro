@@ -22,6 +22,7 @@ import {
   useTranslations,
 } from "../i18n/utils";
 import { languagesRegex } from "../i18n/ui";
+import { mentions } from "../content/data";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -48,9 +49,12 @@ const projects = (await getCollection("work"))
           align="start"
         >
           <div class="roles">
-            <Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-            <Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-            <Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+            <Pill><Icon icon="code" size="1.33em" /> {t("developer")}</Pill>
+            <Pill
+              ><Icon icon="microphone-stage" size="1.33em" />
+              {t("speaker")}</Pill
+            >
+            <Pill><Icon icon="pencil-line" size="1.33em" /> {t("writer")}</Pill>
           </div>
         </Hero>
 
@@ -68,11 +72,8 @@ const projects = (await getCollection("work"))
     <main class="wrapper stack gap-20 lg:gap-48">
       <section class="section with-background with-cta">
         <header class="section-header stack gap-2 lg:gap-4">
-          <h3>Selected Work</h3>
-          <p>
-            Take a look below at some of my featured work for clients from the
-            past few years.
-          </p>
+          <h3>{t("home.selectedWork")}</h3>
+          <p>{t("home.workDescription")}</p>
         </header>
 
         <div class="gallery">
@@ -99,25 +100,18 @@ const projects = (await getCollection("work"))
 
       <section class="section with-background bg-variant">
         <header class="section-header stack gap-2 lg:gap-4">
-          <h3>Mentions</h3>
-          <p>
-            I have been fortunate enough to receive praise for my work in
-            several publications. Take a look below to learn more.
-          </p>
+          <h3>{t("home.mentions")}</h3>
+          <p>{t("home.mentionsDescription")}</p>
         </header>
 
         <div class="gallery">
           <Grid variant="small">
             {
-              [
-                "Medium",
-                "BuzzFeed",
-                "The Next Web",
-                "awwwards.",
-                "TechCrunch",
-              ].map((brand) => (
+              mentions.map(({ label, href }) => (
                 <li class="mention-card">
-                  <p>{brand}</p>
+                  <p>
+                    <a href={href}>{label}</a>
+                  </p>
                 </li>
               ))
             }

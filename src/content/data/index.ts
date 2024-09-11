@@ -45,3 +45,17 @@ export const iconLinks: {
     icon: "wechat-logo",
   },
 ];
+
+export const mentions: {
+  label: string;
+  href: string;
+}[] = [
+  {
+    label: "jsonresume-theme-latte",
+    href: "https://www.npmjs.com/package/jsonresume-theme-latte",
+  },
+  {
+    label: "open-digger-cli",
+    href: "https://www.npmjs.com/package/open-digger-cli",
+  },
+];
