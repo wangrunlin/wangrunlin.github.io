@@ -51,11 +51,19 @@ export const mentions: {
   href: string;
 }[] = [
   {
-    label: "jsonresume-theme-latte",
-    href: "https://www.npmjs.com/package/jsonresume-theme-latte",
+    label: "COSCUP",
+    href: "https://coscup.org/2024/zh-TW/session/VSD9GU",
   },
   {
-    label: "open-digger-cli",
-    href: "https://www.npmjs.com/package/open-digger-cli",
+    label: "npmjs",
+    href: "https://www.npmjs.com/~wangrunlin",
+  },
+  {
+    label: "天星数字游民社区",
+    href: "http://xhslink.com/a/2WL2Q9CKWhFV",
+  },
+  {
+    label: "天府文化ChengduCulture",
+    href: "https://mp.weixin.qq.com/s/6jBAB8o3j1swpbFYlbj5TQ",
   },
 ];
