@@ -1,7 +1,7 @@
 ---
 title: This Moment
 publishDate: 2024-09-12 00:00:00
-img: /assets/stock-1.jpg
+img: /assets/stock-2.jpg
 img_alt: this moment page
 description: |
   This moment is a sharing platform in public space.

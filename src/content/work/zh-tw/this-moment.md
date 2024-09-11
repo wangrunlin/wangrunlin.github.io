@@ -1,7 +1,7 @@
 ---
 title: 當下時刻
 publishDate: 2024-09-12 00:00:00
-img: /assets/stock-1.jpg
+img: /assets/stock-2.jpg
 img_alt: 當下時刻頁面
 description: |
   當下時刻是一個公共空間內的分享平台。

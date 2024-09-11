@@ -1,7 +1,7 @@
 ---
 title: 当下时刻
 publishDate: 2024-09-12 00:00:00
-img: /assets/stock-1.jpg
+img: /assets/stock-2.jpg
 img_alt: 当下时刻页面
 description: |
   当下时刻是一个公共空间内的分享平台。
