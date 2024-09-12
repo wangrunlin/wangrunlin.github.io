@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+
+import MomentLayout from "../../../layouts/MomentLayout.astro";
+
+export async function getStaticPaths() {
+  const moments = await getCollection("moment");
+
+  return moments.map((entry) => {
+    const [lang, ...slug] = entry.slug.split("/");
+
+    return {
+      params: { lang, slug: slug.join("/") || undefined },
+      props: { entry },
+    };
+  });
+}
+
+const { entry } = Astro.props;
+---
+
+<MomentLayout entry={entry} />

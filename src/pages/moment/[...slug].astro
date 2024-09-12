@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+
+import MomentLayout from "../../layouts/MomentLayout.astro";
+import { defaultLang } from "../../i18n/ui";
+
+export async function getStaticPaths() {
+  const moments = (await getCollection("moment")).filter(({ slug }) =>
+    slug.startsWith(defaultLang)
+  );
+
+  return moments.map((entry) => ({
+    params: { slug: entry.slug.replace(`${defaultLang}/`, "") },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<MomentLayout entry={entry} />
