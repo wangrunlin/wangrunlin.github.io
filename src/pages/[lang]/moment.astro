@@ -1,0 +1,11 @@
+---
+import MomentListLayout from "../../layouts/MomentListLayout.astro";
+import { languages } from "../../i18n/ui";
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+---
+
+<MomentListLayout />

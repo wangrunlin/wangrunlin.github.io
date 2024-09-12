@@ -1,0 +1,99 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Grid from "../components/Grid.astro";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
+import { getCollection } from "astro:content";
+import { languagesRegex } from "../i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+const moments = (await getCollection("moment"))
+  .filter(({ slug }) => slug.startsWith(lang))
+  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+---
+
+<BaseLayout
+  title={`${t("work.title")} | ${t("title")}`}
+  description={t("work.description")}
+>
+  <div class="stack gap-20">
+    <main class="wrapper stack gap-8">
+      <Hero
+        title={t("moment.title")}
+        tagline={t("moment.description")}
+        align="center"
+      />
+
+      <ul class="moments">
+        {
+          moments.map(({ slug, data }) => (
+            <li class="moment">
+              <a
+                href={translatePath(
+                  `/moment${slug.replace(languagesRegex, "")}`
+                )}
+              >
+                <span class="title">{data.title}</span>
+                {/* <img
+                  src={data.img}
+                  alt={data.img_alt || ""}
+                  loading="lazy"
+                  decoding="async"
+                /> */}
+              </a>
+
+              <span class="date">{data.publishDate.toLocaleDateString()}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .moments {
+    list-style-type: none;
+    width: 50rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    font-size: var(--text-lg);
+  }
+
+  .moments :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .moments :global(a:hover),
+  .moments :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  .moment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .moment .date {
+    font-size: var(--text-base);
+  }
+
+  @media (max-width: 50em) {
+    .moments {
+      width: 100%;
+    }
+  }
+</style>

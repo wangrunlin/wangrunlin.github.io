@@ -12,4 +12,15 @@ export const collections = {
       img_alt: z.string().optional(),
     }),
   }),
+  moment: defineCollection({
+    type: "content",
+    schema: z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      publishDate: z.coerce.date(),
+      tags: z.array(z.string()).optional(),
+      img: z.string().optional(),
+      img_alt: z.string().optional(),
+    }),
+  }),
 };
