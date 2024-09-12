@@ -25,6 +25,7 @@ export const ui = {
     writer: "Writer",
     contact: "Contact",
     sendMeAMessage: "Send Me a Message",
+    comingSoon: "Coming Soon",
     "home.title": "Hello, my name is Leo Wang",
     "home.description":
       "I am a Creative Developer who is currently based in China.",
@@ -70,6 +71,7 @@ export const ui = {
     writer: "作家",
     contact: "联系",
     sendMeAMessage: "给我发消息",
+    comingSoon: "即将推出",
     "home.title": "你好，我的名字是王润林（阿林）",
     "home.description": "我是一个创意开发者，目前居住在中国。",
     "home.selectedWork": "精选工作",
@@ -112,6 +114,7 @@ export const ui = {
     writer: "作家",
     contact: "聯繫",
     sendMeAMessage: "給我發消息",
+    comingSoon: "即將推出",
     "home.title": "你好，我的名字是王潤林（阿林）",
     "home.description": "我是一個創意開發者，目前居住在中國。",
     "home.selectedWork": "精選工作",

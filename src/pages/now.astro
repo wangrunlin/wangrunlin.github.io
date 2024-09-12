@@ -45,7 +45,7 @@ const NowMarkdownContent = nowMarkdown.find(({ file }) =>
     </header>
   </div>
 
-  <div class="now-content">
+  <div class="content">
     {
       NowMarkdownContent ? (
         <NowMarkdownContent />
@@ -79,10 +79,11 @@ const NowMarkdownContent = nowMarkdown.find(({ file }) =>
     gap: 0.5rem;
   }
 
-  .now-content {
-    /* max-width: 30rem; */
+  .content {
+    max-width: 35rem;
     margin: 0 auto;
     margin-bottom: 1rem;
+    padding: 0 1rem;
 
     h1,
     h2,
@@ -97,6 +98,10 @@ const NowMarkdownContent = nowMarkdown.find(({ file }) =>
 
     h2 {
       font-size: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
     }
   }
 
