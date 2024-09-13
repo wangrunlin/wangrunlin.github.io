@@ -25,10 +25,10 @@ const translatePath = useTranslatedPath(lang);
     <div class="stack gap-15">
       <header>
         <div class="wrapper stack gap-2">
-          <a class="back-link" href={translatePath("/work/")}>
-            <Icon icon="arrow-left" /> Work
+          <a class="back-link" href={translatePath("/moment/")}>
+            <Icon icon="arrow-left" /> Moment
           </a>
-          <Hero title={entry.data.title} align="start">
+          <Hero title={entry.data.title} align="center">
             <div class="details">
               <div class="tags">
                 {entry.data.tags?.map((t) => <Pill>{t}</Pill>)}

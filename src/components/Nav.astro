@@ -8,6 +8,7 @@ import {
 } from "../i18n/utils";
 import { languagesRegex } from "../i18n/ui";
 import LanguagePicker from "./LanguagePicker.astro";
+import { getCollection } from "astro:content";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -22,11 +23,23 @@ const textLinks: { label: string; href: string }[] = [
   { label: t("now"), href: translatePath("/now/") },
 ];
 
+const moments = (await getCollection("moment")).filter(({ id }) =>
+  id.startsWith(lang)
+);
+
 const isActive = (href: string) => {
   const pathname = Astro.url.pathname.replace(languagesRegex, "");
   href = href.replace(languagesRegex, "");
 
-  return pathname === href || (href !== "/" && pathname.startsWith(href));
+  return (
+    pathname === href ||
+    (href !== "/" && pathname.startsWith(href)) ||
+    (href === "/moment/" &&
+      moments.some(
+        ({ id }) =>
+          id.replace(languagesRegex, "").replace(".md", "") === pathname
+      ))
+  );
 };
 ---
 

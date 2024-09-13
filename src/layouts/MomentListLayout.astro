@@ -37,11 +37,7 @@ const moments = (await getCollection("moment"))
         {
           moments.map(({ slug, data }) => (
             <li class="moment">
-              <a
-                href={translatePath(
-                  `/moment${slug.replace(languagesRegex, "")}`
-                )}
-              >
+              <a href={translatePath(slug.replace(languagesRegex, ""))}>
                 <span class="title">{data.title}</span>
                 {/* <img
                   src={data.img}

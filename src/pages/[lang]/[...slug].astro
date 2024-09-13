@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-import MomentLayout from "../../../layouts/MomentLayout.astro";
+import MomentLayout from "../../layouts/MomentLayout.astro";
 
 export async function getStaticPaths() {
   const moments = await getCollection("moment");
