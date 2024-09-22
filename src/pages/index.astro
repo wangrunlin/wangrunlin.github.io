@@ -39,7 +39,7 @@ const projects = (await getCollection("work"))
   .slice(0, 4);
 ---
 
-<BaseLayout>
+<BaseLayout title={`${t("title")} | ${t("home")}`}>
   <div class="stack gap-20 lg:gap-48">
     <div class="wrapper stack gap-8 lg:gap-20">
       <header class="hero">

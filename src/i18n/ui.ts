@@ -13,10 +13,11 @@ export const defaultLang = "en";
 export const ui = {
   en: {
     home: "Home",
+    title: "Leo Wang",
+    description: "The personal site of Leo Wang",
     work: "Work",
     about: "About",
     now: "Now",
-    title: "Leo Wang",
     notFound: "Not Found",
     life: "Life",
     study: "Study",
@@ -60,6 +61,7 @@ export const ui = {
   "zh-cn": {
     home: "首页",
     title: "王润林（阿林）",
+    description: "王润林（阿林）的个人网站",
     work: "工作",
     about: "关于",
     now: "现在",
@@ -102,10 +104,11 @@ export const ui = {
   },
   "zh-tw": {
     home: "首頁",
+    title: "王潤林（阿林）",
+    description: "王潤林（阿林）的個人網站",
     work: "工作",
     about: "關於",
     now: "現在",
-    title: "王潤林（阿林）",
     notFound: "未找到",
     life: "生活",
     study: "學習",
