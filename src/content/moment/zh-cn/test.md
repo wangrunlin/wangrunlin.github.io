@@ -1,8 +1,8 @@
 ---
-title: Test Moment long title long title long title
+title: 测试文章
 publishDate: 2024-09-12
 ---
 
-## Test Moment
+## 测试文章
 
 Content

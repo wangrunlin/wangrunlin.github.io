@@ -2,11 +2,18 @@
 
 > This is a [now](https://nownownow.com/about) page
 
-- last updated: 2024-09-11
+- last updated: 2024-10-09
 
 ## Living
 
-- Dali, China (2024-08-22 - 2024-09-25)
+- Beijing, China (2024-10-07 - 2024-12-31)
+
+## Primary goal
+
+I'm actively looking for a job and trying to make money.
+Priority: Remote full-time job > Beijing hybrid office > Beijing office
+
+I also have [outsourcing development](https://idea2app.cn) business, welcome to contact me.
 
 ## Doing list
 
