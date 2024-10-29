@@ -6,18 +6,42 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 interface Props {
   title?: string | undefined;
   description?: string | undefined;
+  url?: string;
+  image?: string;
 }
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const { title = t("title"), description = t("description") } = Astro.props;
+const {
+  title = t("title"),
+  description = t("description"),
+  url = Astro.url.href,
+  image = "https://github.com/wangrunlin.png",
+} = Astro.props;
 ---
 
 <meta charset="UTF-8" />
 <meta name="description" property="og:description" content={description} />
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
+<meta name="author" content="Leo Wang" />
+
+<!-- Open Graph Meta Tags for Facebook and LinkedIn -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:url" content={url} />
+<meta property="og:type" content="website" />
+
+<!-- twitter card meta -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:site" content="@wangrunlin_" />
+<meta name="twitter:creator" content="@wangrunlin_" />
+
 <title>{title}</title>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

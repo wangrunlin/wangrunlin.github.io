@@ -25,7 +25,11 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.description}>
+<BaseLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  image={entry.data.img}
+>
   <div class="stack gap-20">
     <div class="stack gap-15">
       <header>
