@@ -1,0 +1,60 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+  contentLink: string;
+  tweetText: string;
+  via?: string;
+  hashtags?: string;
+}
+
+const { contentLink, tweetText, via, hashtags } = Astro.props;
+---
+
+<div class="share">
+  <h3 class="share-title">Share Content</h3>
+
+  <div class="">
+    <a
+      href={`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(contentLink)}&via=${encodeURIComponent(via || "")}&hashtags=${encodeURIComponent(hashtags || "")}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class=""
+    >
+      <span class="sr-only">share_to_twitter</span>
+      <Icon icon="x-logo" size="24px" />
+    </a>
+  </div>
+</div>
+
+<script>
+  const share = new URLSearchParams(window.location.search).has("share");
+
+  const shareElement: HTMLDivElement | null = document.querySelector(".share");
+
+  if (share) {
+    shareElement?.classList.add("show");
+  } else {
+    shareElement?.classList.remove("show");
+  }
+</script>
+
+<style>
+  .share {
+    display: none;
+  }
+
+  .share-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .share.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 0.5px solid var(--gray-800);
+    padding: 2rem;
+  }
+</style>

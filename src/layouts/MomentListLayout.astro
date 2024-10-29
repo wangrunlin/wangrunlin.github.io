@@ -3,7 +3,6 @@ import BaseLayout from "./BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
-import Grid from "../components/Grid.astro";
 import {
   getLangFromUrl,
   useTranslatedPath,
@@ -53,6 +52,8 @@ const moments = (await getCollection("moment"))
         }
       </ul>
     </main>
+
+    <ContactCTA />
   </div>
 </BaseLayout>
 

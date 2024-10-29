@@ -7,6 +7,7 @@ import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
 import Icon from "../components/Icon.astro";
 import Pill from "../components/Pill.astro";
+import ShareContent from "../components/ShareContent.astro";
 import {
   getLangFromUrl,
   useTranslatedPath,
@@ -44,6 +45,15 @@ const translatePath = useTranslatedPath(lang);
           </Hero>
         </div>
       </header>
+
+      <!-- if entry.body is start with \n, remove it -->
+      <ShareContent
+        contentLink={Astro.url.href}
+        tweetText={entry.body.startsWith("\n")
+          ? entry.body.slice(1)
+          : entry.body}
+      />
+
       <main class="wrapper">
         <div class="stack gap-10 content">
           {
@@ -57,6 +67,7 @@ const translatePath = useTranslatedPath(lang);
         </div>
       </main>
     </div>
+
     <ContactCTA />
   </div>
 </BaseLayout>
