@@ -48,10 +48,10 @@ const translatePath = useTranslatedPath(lang);
 
       <!-- if entry.body is start with \n, remove it -->
       <ShareContent
-        contentLink={Astro.url.href}
         tweetText={entry.body.startsWith("\n")
           ? entry.body.slice(1)
           : entry.body}
+        client:load
       />
 
       <main class="wrapper">

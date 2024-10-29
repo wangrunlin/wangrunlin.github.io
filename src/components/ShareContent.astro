@@ -2,13 +2,12 @@
 import Icon from "./Icon.astro";
 
 interface Props {
-  contentLink: string;
   tweetText: string;
   via?: string;
   hashtags?: string;
 }
 
-const { contentLink, tweetText, via, hashtags } = Astro.props;
+const { tweetText, via, hashtags } = Astro.props;
 ---
 
 <div class="share">
@@ -16,7 +15,8 @@ const { contentLink, tweetText, via, hashtags } = Astro.props;
 
   <div class="">
     <a
-      href={`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(contentLink)}&via=${encodeURIComponent(via || "")}&hashtags=${encodeURIComponent(hashtags || "")}`}
+      id="share-x"
+      href={`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=#&via=${encodeURIComponent(via || "")}&hashtags=${encodeURIComponent(hashtags || "")}`}
       target="_blank"
       rel="noopener noreferrer"
       class=""
@@ -37,6 +37,16 @@ const { contentLink, tweetText, via, hashtags } = Astro.props;
   } else {
     shareElement?.classList.remove("show");
   }
+
+  // replace url with current url
+  const shareX = document.getElementById("share-x") as HTMLLinkElement;
+  shareX?.setAttribute(
+    "href",
+    shareX?.href.replace(
+      /url=.+&/,
+      `url=${encodeURIComponent(window.location.href)}&`
+    )
+  );
 </script>
 
 <style>
