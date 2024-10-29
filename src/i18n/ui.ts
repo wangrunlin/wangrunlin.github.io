@@ -60,6 +60,7 @@ export const ui = {
     "footer.designed": "Designed & Developed with",
     "moment.title": "Moment",
     "moment.description": "Some moments",
+    "moment.join_conversation": "Join the conversation on",
   },
   "zh-cn": {
     home: "首页",
@@ -107,6 +108,7 @@ export const ui = {
     "footer.designed": "设计并开发",
     "moment.title": "时刻",
     "moment.description": "一些时刻",
+    "moment.join_conversation": "加入对话",
   },
   "zh-tw": {
     home: "首頁",
@@ -154,5 +156,6 @@ export const ui = {
     "footer.designed": "設計並開發",
     "moment.title": "時刻",
     "moment.description": "一些時刻",
+    "moment.join_conversation": "加入對話",
   },
 } as const;

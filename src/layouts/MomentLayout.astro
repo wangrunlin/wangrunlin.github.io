@@ -71,7 +71,7 @@ const translatePath = useTranslatedPath(lang);
     {
       (twitter || mastodon || bluesky) && (
         <div class="conversation">
-          <p class="join-conversation">Join the conversation on</p>
+          <p class="join-conversation">{t("moment.join_conversation")}</p>
           {twitter && (
             <a href={twitter} target="_blank">
               <Icon icon="x-logo" size="24px" />
