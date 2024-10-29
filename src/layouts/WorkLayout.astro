@@ -7,7 +7,11 @@ import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
 import Icon from "../components/Icon.astro";
 import Pill from "../components/Pill.astro";
-import { getLangFromUrl, useTranslatedPath } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
 
 interface Props {
   entry: CollectionEntry<"work">;
@@ -17,6 +21,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
@@ -26,7 +31,8 @@ const translatePath = useTranslatedPath(lang);
       <header>
         <div class="wrapper stack gap-2">
           <a class="back-link" href={translatePath("/work/")}>
-            <Icon icon="arrow-left" /> Work
+            <Icon icon="arrow-left" />
+            {t("work")}
           </a>
           <Hero title={entry.data.title} align="start">
             <div class="details">
