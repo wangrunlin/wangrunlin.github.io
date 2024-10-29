@@ -21,6 +21,9 @@ export const collections = {
       tags: z.array(z.string()).optional(),
       img: z.string().optional(),
       img_alt: z.string().optional(),
+      twitter: z.string().optional(),
+      mastodon: z.string().optional(),
+      bluesky: z.string().optional(),
     }),
   }),
 };

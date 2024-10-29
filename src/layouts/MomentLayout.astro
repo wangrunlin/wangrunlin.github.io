@@ -19,6 +19,7 @@ interface Props {
 }
 
 const { entry } = Astro.props;
+const { twitter, mastodon, bluesky } = entry.data;
 const { Content } = await entry.render();
 
 const lang = getLangFromUrl(Astro.url);
@@ -66,6 +67,31 @@ const translatePath = useTranslatedPath(lang);
         </div>
       </main>
     </div>
+
+    {
+      (twitter || mastodon || bluesky) && (
+        <div class="conversation">
+          <p class="join-conversation">Join the conversation on</p>
+          {twitter && (
+            <a href={twitter} target="_blank">
+              <Icon icon="x-logo" size="24px" />
+            </a>
+          )}
+
+          {mastodon && (
+            <a href={mastodon} target="_blank">
+              <Icon icon="mastodon-logo" size="24px" />
+            </a>
+          )}
+
+          {bluesky && (
+            <a href={bluesky} target="_blank">
+              <Icon icon="bluesky-logo" size="24px" />
+            </a>
+          )}
+        </div>
+      )
+    }
 
     <ContactCTA />
   </div>
@@ -142,6 +168,14 @@ const translatePath = useTranslatedPath(lang);
   .content :global(a:hover),
   .content :global(a:focus) {
     text-decoration-color: currentColor;
+  }
+
+  .conversation {
+    border-top: 1px solid var(--gray-800);
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
   }
 
   @media (min-width: 50em) {

@@ -13,14 +13,13 @@ const { tweetText, via, hashtags } = Astro.props;
 <div class="share">
   <h3 class="share-title">Share Content</h3>
 
-  <div class="">
+  <div>
     <a
       id="share-x"
       href={`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=#&via=${encodeURIComponent(via || "")}&hashtags=${encodeURIComponent(hashtags || "")}`}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="sr-only">share_to_twitter</span>
       <Icon icon="x-logo" size="24px" />
     </a>
     <a
@@ -29,7 +28,6 @@ const { tweetText, via, hashtags } = Astro.props;
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="sr-only">share_to_mastodon</span>
       <Icon icon="mastodon-logo" size="24px" />
     </a>
     <a
@@ -38,7 +36,6 @@ const { tweetText, via, hashtags } = Astro.props;
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span class="sr-only">share_to_bluesky</span>
       <Icon icon="bluesky-logo" size="24px" />
     </a>
   </div>
