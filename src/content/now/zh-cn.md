@@ -2,27 +2,34 @@
 
 > 这是一个 [现在](https://nownownow.com/about) 页面
 
-- 上次更新: 2024-10-09
+- 上次更新: 2025-08-03
 
 ## 居住地
 
-- 中国北京 (2024-10-07 - 2024-12-31)
+- 中国北京 (2025-07-29 - 2025-08-31)
 
 ## 首要目标
 
-最近正在积极找工作中，想办法搞钱的状态。
-优先级：远程全职工作 > 北京线下混合办公 > 北京线下办公
+最近正在和一个团队合作做一个 AI 情感陪伴项目，采用工资 + 分成的方式合作。
 
-有 [外包开发](https://idea2app.cn) 的业务也欢迎联系我。
+长线还是在继续做 AdSense + AI 工具站。
+每个月会做一次被动收入报告。
+
+每周会在北京的 Vibe Friends 疯狂星期四活动线下见面。
+
+<!-- 有 [外包开发](https://idea2app.cn) 的业务也欢迎联系我。 -->
 
 ## 在做列表
 
 - [个人网站](https://alin.run/zh-cn/)
-- [当下时刻](/zh-cn/work/this-moment)
-- [复制标题扩展](/zh-cn/work/copy-title-extension)
-- [Android 复制链接](/zh-cn/work/android-copy-link)
-- 开源商城
-- DNGSN
+- [MakeImg AI](https://makeimg.ai)
+- Claude Code Feishu, TG 封装
+- ？公共空间导航站
+<!-- - [当下时刻](/zh-cn/work/this-moment) -->
+<!-- - [复制标题扩展](/zh-cn/work/copy-title-extension) -->
+<!-- - [Android 复制链接](/zh-cn/work/android-copy-link) -->
+<!-- - 开源商城 -->
+<!-- - DNGSN -->
 
 ## 电影
 
