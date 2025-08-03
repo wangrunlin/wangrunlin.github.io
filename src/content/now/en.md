@@ -21,7 +21,7 @@ Every week, I will meet offline at the Vibe Friends "Crazy Thursday" event in Be
 
 ## Doing list
 
-- [Personal website](https://alin.run)
+- [Personal website](https://www.alin.run)
 - [MakeImg AI](https://makeimg.ai)
 - Claude Code Feishu, TG packaging
 - ? Public space navigation site

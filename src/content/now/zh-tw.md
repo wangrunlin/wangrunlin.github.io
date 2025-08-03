@@ -21,7 +21,7 @@
 
 ## 在做列表
 
-- [個人網站](https://alin.run/zh-tw/)
+- [個人網站](https://www.alin.run/zh-tw/)
 - [MakeImg AI](https://makeimg.ai)
 - Claude Code Feishu, TG 封裝
 - ？公共空間導航站
