@@ -3,8 +3,6 @@ title: SEO 网站点子
 publishDate: 2025-08-03
 latestUpdate: 2025-08-03T22:19:00
 twitter: https://x.com/wangrunlin_/status/1952017744964231648
-mastodon:
-bluesky:
 ---
 
 ## 🚀 独立开发被动收入报告（2025 年 7 月）：$19.1 (+33.1%↗️)
