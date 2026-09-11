@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://wangrunlin.github.io/sitemap.xml

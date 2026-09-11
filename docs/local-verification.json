@@ -1,0 +1,25 @@
+{
+  "alin.run": {
+    "html_pages": 2,
+    "missing_local_references": [],
+    "bad_canonical": []
+  },
+  "wangrunlin.com": {
+    "html_pages": 40,
+    "missing_local_references": [],
+    "bad_canonical": []
+  },
+  "wangrunlin.github.io": {
+    "html_pages": 37,
+    "missing_local_references": [],
+    "bad_canonical": []
+  },
+  "migration": {
+    "old_content_paths": 32,
+    "missing": []
+  },
+  "original_assets": {
+    "preserved": 28,
+    "changed": []
+  }
+}

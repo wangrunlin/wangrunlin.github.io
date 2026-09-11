@@ -1,11 +1,8 @@
 ---
-import IndexPage from "../index.astro";
-import { languages } from "../../i18n/ui";
-
+import OpenSourcePage from "../../components/OpenSourcePage.astro";
 export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+  return ["en", "zh-cn", "zh-tw"].map((lang) => ({ params: { lang } }));
 }
-const { lang } = Astro.params;
 ---
 
-<IndexPage />
+<OpenSourcePage locale={Astro.params.lang} />

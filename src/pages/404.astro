@@ -1,12 +1,16 @@
----
-import Hero from "../components/Hero.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import BaseLayout from "../layouts/BaseLayout.astro";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
----
-
-<BaseLayout title={t("notFound")} description={t("404.description")}>
-  <Hero title={t("404.title")} tagline={t("notFound")} />
-</BaseLayout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="robots" content="noindex" />
+    <title>Page not found | Leo Wang</title>
+  </head>
+  <body style="font:18px/1.6 system-ui;max-width:640px;margin:10vh auto;padding:24px">
+    <h1>Page not found</h1>
+    <p>
+      <a href="/">Open-source homepage</a> ·{" "}
+      <a href="https://wangrunlin.com">Personal website</a>
+    </p>
+  </body>
+</html>

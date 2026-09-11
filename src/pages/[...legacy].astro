@@ -1,0 +1,31 @@
+---
+import routes from "../../docs/previous-personal-routes.json";
+export function getStaticPaths() {
+  return routes.map((path) => ({
+    params: { legacy: path.replace(/^\/|\/$/g, "") },
+    props: { path },
+  }));
+}
+const target = `https://wangrunlin.com${Astro.props.path}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Leo Wang — page moved</title>
+    <link rel="canonical" href={target} />
+    <meta name="robots" content="noindex, follow" />
+  </head>
+  <body style="font: 18px/1.6 system-ui; max-width: 640px; margin: 10vh auto; padding: 24px">
+    <h1>This page has a new home.</h1>
+    <p>My writing, work, and personal updates now live on wangrunlin.com.</p>
+    <p>
+      <a href={target}>Continue to the original page →</a>
+    </p>
+    <p>
+      <a href="/">Visit my open-source homepage</a>
+    </p>
+  </body>
+</html>
