@@ -5,6 +5,7 @@ import partytown from "@astrojs/partytown";
 // https://astro.build/config
 export default defineConfig({
   site: "https://wangrunlin.github.io",
+  compressHTML: true,
   trailingSlash: "always",
   integrations: [partytown()],
   i18n: {

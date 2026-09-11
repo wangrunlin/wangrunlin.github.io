@@ -7,9 +7,9 @@ interface Props {
   project: CollectionEntry<"work">;
 }
 
-const { data, slug } = Astro.props.project;
-console.log(slug);
-console.log(slug.replace(languagesRegex, ""));
+const { data, id } = Astro.props.project;
+console.log(id);
+console.log(id.replace(languagesRegex, ""));
 
 const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
@@ -17,7 +17,7 @@ const translatePath = useTranslatedPath(lang);
 
 <a
   class="card"
-  href={translatePath(`/work${slug.replace(languagesRegex, "")}`)}
+  href={translatePath(`/work${id.replace(languagesRegex, "")}`)}
 >
   <span class="title">{data.title}</span>
   <img

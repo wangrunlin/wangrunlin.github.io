@@ -12,7 +12,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const projects = (await getCollection("work"))
-  .filter(({ slug }) => slug.startsWith(lang))
+  .filter(({ id }) => id.startsWith(lang))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
 ---
 

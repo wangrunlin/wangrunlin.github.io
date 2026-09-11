@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry } from "astro:content";
+import { render, type CollectionEntry } from "astro:content";
 
 import BaseLayout from "./BaseLayout.astro";
 
@@ -20,7 +20,7 @@ interface Props {
 
 const { entry } = Astro.props;
 const { twitter, mastodon, bluesky } = entry.data;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -53,9 +53,9 @@ const translatePath = useTranslatedPath(lang);
 
       <!-- if entry.body is start with \n, remove it -->
       <ShareContent
-        tweetText={entry.body.startsWith("\n")
+        tweetText={entry.body?.startsWith("\n")
           ? entry.body.slice(1)
-          : entry.body}
+          : (entry.body ?? "")}
       />
 
       <main class="wrapper">
