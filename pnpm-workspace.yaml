@@ -1,3 +1,12 @@
 allowBuilds:
   esbuild: true
   sharp: true
+
+# Floors only. Upper bounds stay on the major already accepted by Astro 7.3
+# so a later patch can land without jumping to a breaking release.
+overrides:
+  devalue: ">=5.9.3 <6"
+  http-cache-semantics: ">=4.3.0 <5"
+  sharp: ">=0.35.5 <0.36"
+  source-map-js: ">=1.2.2 <2"
+  vite: ">=8.2.4 <8.3"
